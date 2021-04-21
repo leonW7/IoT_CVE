@@ -2,11 +2,11 @@
 The Vulnerability is in `/goform/setVLAN` page which influence the lastest version routerOS(RTOS, This is system different from linux system)[AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
-In the page `/gofrom/setVLAN` have one stack buffer overflow vulnerability.
+In the page `/gofrom/setVLAN` have two stack buffer overflow vulnerability.
 
 1. It isn't limit our input when we input `VLANArea` in `v8` and `VLANID` in `v9`.
 2. if `v8` is equal to `1`,`v9` copy to `v14` and jump to LABEL_6
-3. `v14` will copy to a stack value `v40` by using `strcpy(v40, v14);`.strcpy couldn't limit copy length ,so wo can make stack buffer overflow in `v40`
+3. In LABEL_6, `v14` will copy to a stack value `v40` by using `strcpy(v40, v14);`.strcpy couldn't limit copy length ,so wo can make stack buffer overflow in `v40`
 4. if `v8` is equal to `2`,`v9` will copy to a stack value `v37` by using `strcpy(v37, v9);`,so wo can also make stack buffer overflow in `v37`
 ![](./1.png)
 
