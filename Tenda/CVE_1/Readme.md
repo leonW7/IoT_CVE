@@ -27,4 +27,4 @@ module1=wifiBasicCfg&doubleBandUnityEnable=false&wifiTotalEn=true&wifiEn=true&wi
 ```
 ## Acknowledgment 
 
-Credit to [@peanuts](https://github.com/peanuts62), [@leonW7](https://github.com/leonW7), [@cpegg](https://github.com/cpeggg),[@ainevsia](https://github.com/ainevsia) [@Lnkvct](https://github.com/Lnkvct) and [@Yu3H0](https://github.com/Yu3H0/) from Shanghai Jiao Tong University.
+Credit to [@peanuts](https://github.com/peanuts62), [@leonW7](https://github.com/leonW7), [@cpegg](https://github.com/cpeggg),[@ainevsia](https://github.com/ainevsia), [@Lnkvct](https://github.com/Lnkvct) and [@Yu3H0](https://github.com/Yu3H0/) from Shanghai Jiao Tong University.
